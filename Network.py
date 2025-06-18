@@ -1,8 +1,8 @@
 import networkx as nx
 from User import User
 import matplotlib.pyplot as plt
-from uuid import uuid4
 import json
+from datetime import datetime
 
 class UserNetwork:
 
@@ -15,13 +15,13 @@ class UserNetwork:
 
     def add_user(self, name, handle):
         #checks if the user is already in the network
-        if handle in self.users:
+        if handle.lower() in self.users:
             user_id = self.users[handle]
             self.freqDict[user_id] += 50
             return user_id
         
         """Add a user to the network."""
-        user_id = uuid4()
+        user_id = handle.lower()  # Using handle as user_id for simplicity
         user = User(user_id, name, handle)
         self.users[handle] = user.user_id
         self.G.add_node(user_id, user=user)  # Add user as a node in the graph
@@ -60,13 +60,13 @@ class UserNetwork:
             self.G.remove_node(user_id)
 
     def display_network(self, focus_user=None):
-        self.prune_network(focus_user, 150)
+        self.prune_network(focus_user, 100)
         node_sizes = [1000 if node==focus_user else self.freqDict[node] for node in self.G.nodes()]
         """Display the network's nodes and edges."""
         print("Users in the network:" + str(self.G.number_of_nodes()))
         print(len(self.freqDict))
         print(self.G.edges)
-        self.save_network("musk.json", focus_user)
+        self.save_network("data.json")
         subax1 = plt.subplot(121)
         nx.draw(self.G, node_size=node_sizes, labels=self.labelDict, with_labels=True, node_color='lightblue', font_size=10, font_color='black', ax=subax1)
         subax1.set_title("User Network")
@@ -79,17 +79,26 @@ class UserNetwork:
                 del self.labelDict[node]
                 self.remove_user(node)
 
-    def save_network(self, filename, focus_user) :
-        output_json = {}
+    def save_network(self, filename) :
         """Save the network to a file."""
-        with open (filename, 'a') as f:
-            output_json[focus_user] = []
+        with open (filename, 'r+') as f:
+            output_json = json.load(f)
             for node in self.G.nodes():
                 user = self.G.nodes[node]['user']
                 user_obj = {
-                    "name": user.name,
-                    "handle": user.handle,
-                    "strength": self.freqDict.get(node, 0)
+                    "id": user.handle,
+                    "label": user.handle,
+                    "real_name": user.name,
                 }
-                output_json[focus_user].append(user_obj)
+                output_json["nodes"].append(user_obj)
+                f.seek(0)
+            for edge in self.G.edges():
+                edge_obj = {
+                    "source": edge[0],
+                    "target": edge[1],
+                    "id": str(edge[0]) + "_" + str(edge[1]),
+                    "label": "interaction",
+                    "created": str(datetime.now())
+                }
+                output_json["edges"].append(edge_obj)
             json.dump(output_json, f, indent=4)

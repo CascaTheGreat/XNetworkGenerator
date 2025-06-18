@@ -1,0 +1,116 @@
+{
+    "nodes": [
+        {
+            "id": "elonmusk",
+            "label": "elonmusk",
+            "real_name": "elonmusk"
+        },
+        {
+            "id": "elonmusk",
+            "label": "elonmusk",
+            "real_name": "elonmusk"
+        },
+        {
+            "id": "iam_smx",
+            "label": "iam_smx",
+            "real_name": "smx \ud83c\uddfa\ud83c\uddf8"
+        },
+        {
+            "id": "profstonge",
+            "label": "profstonge",
+            "real_name": "peter st onge, ph.d."
+        },
+        {
+            "id": "gunsnrosesgirl3",
+            "label": "gunsnrosesgirl3",
+            "real_name": "science girl"
+        },
+        {
+            "id": "gwynne_shotwell",
+            "label": "gwynne_shotwell",
+            "real_name": "gwynne shotwell"
+        },
+        {
+            "id": "junogsp7",
+            "label": "junogsp7",
+            "real_name": "tom moore"
+        },
+        {
+            "id": "wallstreetmav",
+            "label": "wallstreetmav",
+            "real_name": "wall street mav"
+        }
+    ],
+    "edges": [
+        {
+            "source": "elonmusk",
+            "target": "iam_smx",
+            "id": "elonmusk_iam_smx",
+            "label": "interaction",
+            "created": "2025-06-18 18:07:32.190974"
+        },
+        {
+            "source": "elonmusk",
+            "target": "profstonge",
+            "id": "elonmusk_profstonge",
+            "label": "interaction",
+            "created": "2025-06-18 18:07:32.190995"
+        },
+        {
+            "source": "elonmusk",
+            "target": "gunsnrosesgirl3",
+            "id": "elonmusk_gunsnrosesgirl3",
+            "label": "interaction",
+            "created": "2025-06-18 18:07:32.190999"
+        },
+        {
+            "source": "elonmusk",
+            "target": "gwynne_shotwell",
+            "id": "elonmusk_gwynne_shotwell",
+            "label": "interaction",
+            "created": "2025-06-18 18:07:32.191002"
+        },
+        {
+            "source": "elonmusk",
+            "target": "elonmusk",
+            "id": "elonmusk_elonmusk",
+            "label": "interaction",
+            "created": "2025-06-18 18:07:32.191019"
+        },
+        {
+            "source": "iam_smx",
+            "target": "iam_smx",
+            "id": "iam_smx_iam_smx",
+            "label": "interaction",
+            "created": "2025-06-18 18:07:32.191024"
+        },
+        {
+            "source": "profstonge",
+            "target": "profstonge",
+            "id": "profstonge_profstonge",
+            "label": "interaction",
+            "created": "2025-06-18 18:07:32.191028"
+        },
+        {
+            "source": "profstonge",
+            "target": "junogsp7",
+            "id": "profstonge_junogsp7",
+            "label": "interaction",
+            "created": "2025-06-18 18:07:32.191031"
+        },
+        {
+            "source": "profstonge",
+            "target": "wallstreetmav",
+            "id": "profstonge_wallstreetmav",
+            "label": "interaction",
+            "created": "2025-06-18 18:07:32.191035"
+        },
+        {
+            "source": "gunsnrosesgirl3",
+            "target": "gunsnrosesgirl3",
+            "id": "gunsnrosesgirl3_gunsnrosesgirl3",
+            "label": "interaction",
+            "created": "2025-06-18 18:07:32.191039"
+        }
+    ]
+}

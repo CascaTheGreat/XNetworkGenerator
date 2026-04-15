@@ -54,6 +54,21 @@
             "id": "adamlowisz",
             "label": "adamlowisz",
             "real_name": "adam lowisz x meetup \ud83c\uddfa\ud83c\uddf8\ud83c\uddf5\ud83c\uddf1\ud83c\uddea\ud83c\uddfa\ud83c\uddec\ud83c\udde7\ud83c\uddfa\ud83c\udde6"
+        },
+        {
+            "id": "elonmusk",
+            "label": "elonmusk",
+            "real_name": "elonmusk"
+        },
+        {
+            "id": "cb_doge",
+            "label": "cb_doge",
+            "real_name": "dogedesigner"
+        },
+        {
+            "id": "adamlowisz",
+            "label": "adamlowisz",
+            "real_name": "adam lowisz x meetup \ud83c\uddfa\ud83c\uddf8\ud83c\uddf5\ud83c\uddf1\ud83c\uddea\ud83c\uddfa\ud83c\uddec\ud83c\udde7\ud83c\uddfa\ud83c\udde6"
         }
     ],
     "edges": [
@@ -140,6 +155,20 @@
             "id": "elonmusk_adamlowisz",
             "label": "interaction",
             "created": "2026-04-14 20:46:38.720954"
+        },
+        {
+            "source": "elonmusk",
+            "target": "cb_doge",
+            "id": "elonmusk_cb_doge",
+            "label": "interaction",
+            "created": "2026-04-14 21:17:08.577316"
+        },
+        {
+            "source": "elonmusk",
+            "target": "adamlowisz",
+            "id": "elonmusk_adamlowisz",
+            "label": "interaction",
+            "created": "2026-04-14 21:17:08.577344"
         }
     ]
 }

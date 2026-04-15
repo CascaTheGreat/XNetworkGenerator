@@ -39,6 +39,21 @@
             "id": "wallstreetmav",
             "label": "wallstreetmav",
             "real_name": "wall street mav"
+        },
+        {
+            "id": "elonmusk",
+            "label": "elonmusk",
+            "real_name": "elonmusk"
+        },
+        {
+            "id": "cb_doge",
+            "label": "cb_doge",
+            "real_name": "dogedesigner"
+        },
+        {
+            "id": "adamlowisz",
+            "label": "adamlowisz",
+            "real_name": "adam lowisz x meetup \ud83c\uddfa\ud83c\uddf8\ud83c\uddf5\ud83c\uddf1\ud83c\uddea\ud83c\uddfa\ud83c\uddec\ud83c\udde7\ud83c\uddfa\ud83c\udde6"
         }
     ],
     "edges": [
@@ -111,6 +126,20 @@
             "id": "gunsnrosesgirl3_gunsnrosesgirl3",
             "label": "interaction",
             "created": "2025-06-18 18:07:32.191039"
+        },
+        {
+            "source": "elonmusk",
+            "target": "cb_doge",
+            "id": "elonmusk_cb_doge",
+            "label": "interaction",
+            "created": "2026-04-14 20:46:38.720935"
+        },
+        {
+            "source": "elonmusk",
+            "target": "adamlowisz",
+            "id": "elonmusk_adamlowisz",
+            "label": "interaction",
+            "created": "2026-04-14 20:46:38.720954"
         }
     ]
 }
